@@ -64,7 +64,7 @@ show_header() {
   ui_2col "$(ui_dot $haproxy_on) HAProxy" ""
   echo -e "${CYAN}$UI_BOX_MID${NC}"
   ui_kv "Multiplex 443" "$mux_badge"
-  ui_kv "Fitur Pro"     "$pro_badge"
+  ui_kv "Fitur bot"     "$pro_badge"
   echo -e "${CYAN}$UI_BOX_MID${NC}"
   ui_line "${WHITE}${BOLD}${total_akun}${NC}${WHITE} akun aktif${NC}"
   ui_line "${DIM}VMess ${vmess_count} · VLess ${vless_count} · Trojan ${trojan_count} · SS ${ss_count} · SSH ${ssh_count}${NC}"
