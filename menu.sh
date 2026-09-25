@@ -83,7 +83,7 @@ main_menu() {
   ui_2col "$(ui_menu_num 06 'Nginx')"           "$(ui_menu_num 07 'Dropbear')"
   ui_2col "$(ui_menu_num 08 'HAProxy SSL')"     "$(ui_menu_num 09 'Change Domain')"
   ui_2col "$(ui_menu_num 10 'Update Script')"  "$(ui_menu_num 11 'Status Layanan')"
-  ui_2col "$(ui_menu_num 12 'System Info')"    "$(ui_menu_num 13 'Bot Telegram Pro')"
+  ui_2col "$(ui_menu_num 12 'System Info')"    "$(ui_menu_num 13 'Bot Telegram')"
   echo -e "${CYAN}$UI_BOX_MID${NC}"
   ui_line "${PURPLE}${BOLD}  LAINNYA${NC}"
   ui_2col "$(ui_menu_num 14 'Uninstall' "$RED")" "$(ui_menu_num 15 'Rebuild OS VPS' "$RED")"
