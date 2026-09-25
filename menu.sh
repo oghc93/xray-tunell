@@ -39,7 +39,7 @@ show_header() {
   local pro_badge="${DIM}belum di-setup${NC}"
   if [[ -f "$PRO_CONFIG" ]]; then
     if [[ -n "$TELEGRAM_BOT_TOKEN" ]]; then
-      pro_badge="${GREEN}aktif${NC} ${DIM}(limit+kuota+Telegram)${NC}"
+      pro_badge="${GREEN}aktif${NC}"
     else
       pro_badge="${GREEN}aktif${NC}"
     fi
