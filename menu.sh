@@ -34,7 +34,7 @@ show_header() {
   systemctl is-active --quiet haproxy  2>/dev/null && haproxy_on=1
 
   local mux_badge="${DIM}nonaktif${NC}"
-  [[ -f "$SCRIPT_DIR/.multiplex-443-active" ]] && mux_badge="${GREEN}aktif${NC} ${DIM}(SNI bebas)${NC}"
+  [[ -f "$SCRIPT_DIR/.multiplex-443-active" ]] && mux_badge="${GREEN}aktif${NC}"
 
   local pro_badge="${DIM}belum di-setup${NC}"
   if [[ -f "$PRO_CONFIG" ]]; then
@@ -47,7 +47,7 @@ show_header() {
 
   echo -e "${CYAN}$UI_BOX_TOP${NC}"
   ui_line_center "${WHITE}${BOLD}CHANELOG VPN TUNNEL MANAGER${NC}"
-  ui_line_center "${DIM}${PURPLE}pro edition${NC}"
+  ui_line_center "${DIM}${PURPLE}by chanelog${NC}"
   echo -e "${CYAN}$UI_BOX_MID${NC}"
   ui_kv "Domain"        "$domain"
   ui_kv "IP VPS"        "$ip"
@@ -76,12 +76,12 @@ main_menu() {
   echo -e "${CYAN}$UI_BOX_TOP${NC}"
   ui_line_center "${WHITE}${BOLD}MENU UTAMA${NC}"
   ui_section "  PROTOKOL"
-  ui_2col "$(ui_menu_num 1 'SSH / SSH-WS')" "$(ui_menu_num 2 'VMess WS')"
-  ui_2col "$(ui_menu_num 3 'VLess WS')"     "$(ui_menu_num 4 'Trojan WS/gRPC')"
-  ui_2col "$(ui_menu_num 5 'Shadowsocks')"  ""
+  ui_2col "$(ui_menu_num 01 'SSH / SSH-WS')" "$(ui_menu_num 02 'VMess WS')"
+  ui_2col "$(ui_menu_num 03 'VLess WS')"     "$(ui_menu_num 04 'Trojan WS/gRPC')"
+  ui_2col "$(ui_menu_num 05 'Shadowsocks')"  ""
   ui_section "  SISTEM"
-  ui_2col "$(ui_menu_num 6 'Nginx')"           "$(ui_menu_num 7 'Dropbear')"
-  ui_2col "$(ui_menu_num 8 'HAProxy SSL')"     "$(ui_menu_num 9 'Change Domain')"
+  ui_2col "$(ui_menu_num 06 'Nginx')"           "$(ui_menu_num 07 'Dropbear')"
+  ui_2col "$(ui_menu_num 08 'HAProxy SSL')"     "$(ui_menu_num 09 'Change Domain')"
   ui_2col "$(ui_menu_num 10 'Update Script')"  "$(ui_menu_num 11 'Status Layanan')"
   ui_2col "$(ui_menu_num 12 'System Info')"    "$(ui_menu_num 13 'Bot Telegram Pro')"
   echo -e "${CYAN}$UI_BOX_MID${NC}"
