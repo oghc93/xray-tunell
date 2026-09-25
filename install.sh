@@ -7,7 +7,7 @@
 # ============================================================
 
 REPO="https://raw.githubusercontent.com/chanelog/bin/main"
-RAW="https://raw.githubusercontent.com/arsyad93/All-Tun/main"
+RAW="https://raw.githubusercontent.com/oghc93/xray-tunell/main"
 SCRIPT_DIR="/etc/vpn-script"
 BIN_DIR="/usr/local/bin"
 
@@ -974,7 +974,7 @@ install_script_files() {
   ln -sf $SCRIPT_DIR/menu.sh $BIN_DIR/vpn
   chmod +x $BIN_DIR/vpn
 
-  printf '\033[1;94m🇮🇩 MANTAP SUDAH KONEK 🇮🇩\033[0m\n' > "$SCRIPT_DIR/banner.txt"
+  printf '🇮🇩 MANTAP SUDAH KONEK 🇮🇩' > "$SCRIPT_DIR/banner.txt"
 
   echo -e "${GREEN}[OK]${NC} Script files terinstall"
 }
