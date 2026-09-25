@@ -87,7 +87,7 @@ main_menu() {
   echo -e "${CYAN}$UI_BOX_MID${NC}"
   ui_line "${PURPLE}${BOLD}  LAINNYA${NC}"
   ui_2col "$(ui_menu_num 14 'Uninstall' "$RED")" "$(ui_menu_num 15 'Rebuild OS VPS' "$RED")"
-  ui_line "$(ui_menu_num 0 'Exit' "$DIM")"
+  ui_line "$(ui_menu_num 00 'Exit' "$DIM")"
   echo -e "${CYAN}$UI_BOX_BOT${NC}"
   echo ""
   echo -ne "  ${WHITE}${BOLD}Pilih menu [0-15]${NC} ${DIM}›${NC} "
