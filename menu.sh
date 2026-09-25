@@ -41,7 +41,7 @@ show_header() {
     if [[ -n "$TELEGRAM_BOT_TOKEN" ]]; then
       pro_badge="${GREEN}aktif${NC} ${DIM}(limit+kuota+Telegram)${NC}"
     else
-      pro_badge="${GREEN}aktif${NC} ${DIM}(limit+kuota)${NC}"
+      pro_badge="${GREEN}aktif${NC}"
     fi
   fi
 
