@@ -1,0 +1,36 @@
+FILE YANG HARUS DI-UPLOAD ULANG KE GITHUB (oghc93/xray-tunell, branch main)
+(file ini sendiri JANGAN di-upload)
+
+Upload ke folder yang sama, nama file harus persis sama supaya menimpa:
+
+  [root]
+  1. install.sh   -> unduh file baru, pasang UDPGW 7300, pasang rotasi log otomatis
+  2. lib.sh       -> daftar update ikut file baru
+  3. menu.sh      -> menu utama jadi 01-20 (ada OpenVPN, Keamanan, Monitor & Tools)
+
+  [addon/]
+  4. addon/torrent-block.sh          -> FILE BARU: blokir BitTorrent (Xray + iptables)
+  5. addon/sshws-pro.sh              -> cron limiter yang filenya hilang dilewati
+  6. addon/xray-maxlogin-daemon.sh   -> Xray hanya reload saat ada akun direset
+
+  [menu/]
+  7. menu/bbr.sh        -> FILE BARU: BBR & IPv6 ON/OFF
+  8. menu/openvpn.sh    -> FILE BARU: OpenVPN TCP 1194, UDP 2200, WebSocket nTLS 80 + TLS 443, link download .ovpn (login akun SSH)
+  9. menu/security.sh   -> FILE BARU: Fail2ban + blokir torrent
+ 10. menu/tools.sh      -> FILE BARU: user online & kick, speedtest, traffic bulanan, swap, tuning, rotasi log
+ 11. menu/uninstall.sh  -> ikut menghapus UDPGW, OpenVPN, torrent, rotasi log
+
+  [systemd/]
+ 12. systemd/xray-maxlogin.service   -> Requires diganti Wants
+
+Sisa file lain TIDAK berubah.
+
+NOMOR MENU UTAMA:
+  01 SSH  02 VMess  03 VLess  04 Trojan  05 Shadowsocks
+  06 Nginx  07 Dropbear  08 HAProxy  09 Change Domain
+  10 Update Script  11 Status Layanan  12 System Info  13 Bot Telegram
+  14 Update Panel Web  15 BBR & IPv6  16 OpenVPN  17 Keamanan  18 Monitor & Tools
+  19 Uninstall  20 Rebuild OS VPS  00 Exit
+
+Saran: upload 5 file baru dulu (torrent-block, bbr, openvpn, security, tools),
+tes di VPS, baru upload sisanya. Fitur #1 backup, #4 alert Telegram, #10 Cloudflare tidak dibuat.
