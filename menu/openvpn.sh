@@ -322,7 +322,7 @@ make_client_files() {
   build_client udp "$UDP_PORT" "$OVPN_CLIENT_DIR/vpn-udp.ovpn"
   ok "File client: $OVPN_CLIENT_DIR/vpn-tcp.ovpn (TCP $TCP_PORT)"
   ok "File client: $OVPN_CLIENT_DIR/vpn-udp.ovpn (UDP $UDP_PORT)"
-  ok "File client: $OVPN_CLIENT_DIR/vpn-ws.ovpn (WS nTLS 80) & vpn-wss.ovpn (WS TLS 443)"
+  ok "File client: $OVPN_CLIENT_DIR/vpn-ws.ovpn (WS tls / ntls)"
 }
 
 user_password() { list_ssh | awk -F'|' -v u="$1" '$1==u {print $2; exit}'; }
